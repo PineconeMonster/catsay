@@ -5,3 +5,14 @@ catsay [message]
 
 run build.sh to compile it
 and install.sh to install it
+
+```
+        _________
+|\_/|  |         |
+|.w.| <  this    |
+|   |  | is      |
+|   |  | a       |
+|   |  | preview |
+|   |  |         |
+|   |   ¯¯¯¯¯¯¯¯¯
+```
