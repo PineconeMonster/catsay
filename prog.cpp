@@ -7,7 +7,7 @@ using std::cout;
 #define SKIP3 std::string(biggest+2,'_')
 
 int getSize(char array[]){
-return strlen(array);
+	return strlen(array);
 }
 
 /*
@@ -16,66 +16,66 @@ return strlen(array);
 |.w.| <  hell yeah! |
 |   |  |            |
 |   |   ¯¯¯¯¯¯¯¯¯¯¯¯
-         The goal         */
+          The goal         */
 
 int main(const int argc, char *argv[]){
 
-if(argc>1){
+	if(argc>1){
 
-int biggest = 0;
-int size;
-std::string stripped;
+		int biggest = 0;
+		int size;
+		std::string stripped;
 
-for(int i=1;i<argc;i++){//get biggest
-size=getSize(argv[i]);
-if(size>biggest)biggest=size;}
+		for(int i=1;i<argc;i++){//get biggest
+			size=getSize(argv[i]);
+			if(size>biggest)biggest=size;}
 
-cout<<"        "<<SKIP3<<'\n';
+		cout<<"        "<<SKIP3<<'\n';
 
-for(int i=1;i<argc+2;i++){
-if(i<argc+1){
-size=getSize(argv[i-1]);
+		for(int i=1;i<argc+2;i++){
+			if(i<argc+1){
+				size=getSize(argv[i-1]);
 
-stripped = argv[i-1];
-for(int i=0;i<size;i++){
-if(stripped[i]=='\n'){
-stripped[i]=' ';
-}}
+				stripped = argv[i-1];
+				for(int i=0;i<size;i++){
+					if(stripped[i]=='\n'){
+						stripped[i]=' ';
+					}}
 
-}
+			}
 
-switch(i){
+			switch(i){
 
-case 1:
-cout<<"|\\_/|  |"<<SKIP1<<"|\n";
-break;
+				case 1:
+					cout<<"|\\_/|  |"<<SKIP1<<"|\n";
+					break;
 
-case 2:
-cout<<"|.w.| <  "<<stripped<<SKIP2<<" |\n";
-break;
+				case 2:
+					cout<<"|.w.| <  "<<stripped<<SKIP2<<" |\n";
+					break;
 
-default:
+				default:
 
-if(i==argc+1){
+					if(i==argc+1){
 
-cout<<"|   |  |"<<SKIP1<<"|\n";
-break;}
+						cout<<"|   |  |"<<SKIP1<<"|\n";
+						break;}
 
-if(i==argc+2){
+					if(i==argc+2){
 
-cout<<"|   |\n";
-break;}
+						cout<<"|   |\n";
+						break;}
 
-cout<<"|   |  | "<<stripped<<SKIP2<<" |\n";
-break;
+					cout<<"|   |  | "<<stripped<<SKIP2<<" |\n";
+					break;
 
-}}
-cout<<"|   |   ";
-for(int i=0;i<biggest+2;i++)cout<<"¯";
-cout<<std::endl;
+			}}
+		cout<<"|   |   ";
+		for(int i=0;i<biggest+2;i++)cout<<"¯";
+		cout<<std::endl;
 
-}
+	}
 
-return 0;
+	return 0;
 
 }
