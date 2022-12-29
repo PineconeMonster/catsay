@@ -6,10 +6,6 @@ using std::cout;
 #define SKIP2 std::string(biggest-size,' ')
 #define SKIP3 std::string(biggest+2,'_')
 
-int getSize(char array[]){
-	return strlen(array);
-}
-
 /*
         ____________
 |\_/|  |            |
@@ -27,14 +23,14 @@ int main(const int argc, char *argv[]){
 		std::string stripped;
 
 		for(int i=1;i<argc;i++){//get biggest
-			size=getSize(argv[i]);
+			size=strlen(argv[i]);
 			if(size>biggest)biggest=size;}
 
 		cout<<"        "<<SKIP3<<'\n';
 
 		for(int i=1;i<argc+2;i++){
 			if(i<argc+1){
-				size=getSize(argv[i-1]);
+				size=strlen(argv[i-1]);
 
 				stripped = argv[i-1];
 				for(int i=0;i<size;i++){
